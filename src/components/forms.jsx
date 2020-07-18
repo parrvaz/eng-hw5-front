@@ -9,7 +9,9 @@ class Forms extends Component {
   };
 
   async componentDidMount() {
-    const { data } = await axios.get("http://localhost:8000/api/forms");
+    const { data } = await axios.get(
+      "https://eng-hw5-back.herokuapp.com/api/forms"
+    );
     this.setState({ data });
   }
 

@@ -13,7 +13,7 @@ const FormDetails = (props) => {
 
   const handleSave = () => {
     axios.post(
-      "http://localhost:8000/api/forms/" + props.match.params.id,
+      "https://eng-hw5-back.herokuapp.com/api/forms/" + props.match.params.id,
       result
     );
     props.history.push("/api/forms");
@@ -22,7 +22,7 @@ const FormDetails = (props) => {
   useEffect(() => {
     async function fetchData() {
       const { data } = await axios.get(
-        "http://localhost:8000/api/forms/" + props.match.params.id
+        "https://eng-hw5-back.herokuapp.com/api/forms/" + props.match.params.id
       );
       setData(data);
     }
