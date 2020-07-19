@@ -5,8 +5,7 @@ import Forms from "./components/forms";
 import FormDetails from "./components/formDetails";
 import "./App.css";
 import "antd/dist/antd.css";
-const dotenv = require("dotenv");
-dotenv.config();
+require("dotenv").config();
 
 class App extends Component {
   render() {

@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import Background from "./location-2.gif";
 
-const key = process.env.KEY || "AIzaSyDjs0u02-62FMwrtxMxci5pc6PIubSyW28";
-
 class SimpleMap extends Component {
   state = { point: {} };
 
@@ -26,7 +24,7 @@ class SimpleMap extends Component {
       <div style={{ height: "50vh", width: "50%" }}>
         <GoogleMapReact
           onClick={({ lat, lng }) => this.onChange(lat, lng)}
-          bootstrapURLKeys={{ key: key }}
+          bootstrapURLKeys={{ key: process.env.KEY }}
           defaultCenter={defaultValue.center}
           defaultZoom={defaultValue.zoom}
         >
