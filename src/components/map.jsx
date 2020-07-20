@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import Background from "./location-2.gif";
 
+const keyMap = process.env.REACT_APP_KEY_MAP;
+
 class SimpleMap extends Component {
   state = { point: {} };
 
@@ -11,6 +13,7 @@ class SimpleMap extends Component {
   };
 
   render() {
+    console.log(keyMap);
     const defaultValue = {
       center: {
         lat: 35.58212419,
@@ -24,7 +27,7 @@ class SimpleMap extends Component {
       <div style={{ height: "50vh", width: "50%" }}>
         <GoogleMapReact
           onClick={({ lat, lng }) => this.onChange(lat, lng)}
-          bootstrapURLKeys={{ key: process.env.KEY }}
+          bootstrapURLKeys={{ key: keyMap }}
           defaultCenter={defaultValue.center}
           defaultZoom={defaultValue.zoom}
         >

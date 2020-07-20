@@ -5,7 +5,8 @@ import Forms from "./components/forms";
 import FormDetails from "./components/formDetails";
 import "./App.css";
 import "antd/dist/antd.css";
-require("dotenv").config();
+
+console.log(process.env.REACT_APP_KEY_MAP);
 
 class App extends Component {
   render() {

@@ -5,7 +5,7 @@ import "./index.css";
 import App from "./App";
 // import "antd/dist/antd.css";
 import registerServiceWorker from "./registerServiceWorker";
-
+require("dotenv").config();
 ReactDOM.render(
   <BrowserRouter>
     <App />
