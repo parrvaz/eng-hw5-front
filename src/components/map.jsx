@@ -13,7 +13,6 @@ class SimpleMap extends Component {
   };
 
   render() {
-    console.log(keyMap);
     const defaultValue = {
       center: {
         lat: 35.58212419,
